@@ -2,25 +2,25 @@ const ScrollTrigger=window.ScrollTrigger;
 const gsap=window.gsap||{registerPlugin(){},from(){},to(){},fromTo(){}};
 if(ScrollTrigger)gsap.registerPlugin(ScrollTrigger);
 const seedProducts = [
-  { id:'q-101',name:'Air High — أبيض وأسود',category:'shoes',price:549,badge:'الأكثر طلباً',image:'./assets/products/white-sneakers.jpg',colors:['#f4f4f1','#181a1c','#a8aaab'] },
-  { id:'q-102',name:'Street Runner — رمادي',category:'shoes',price:429,badge:'وصل جديد',image:'./assets/products/gray-sneakers.jpg',colors:['#d8d9d7','#222426'] },
-  { id:'q-103',name:'Urban Low — كحل',category:'shoes',price:469,badge:'اختيار الموسم',image:'./assets/products/blue-sneakers.jpg',colors:['#171a20','#777d83'] },
-  { id:'q-104',name:'Tracksuit كامل — كحل',category:'clothing',price:649,badge:'قطعة أساسية',image:'./assets/products/black-tracksuit.jpg',colors:['#17191b','#d8d9d7'] },
-  { id:'q-105',name:'جاكيت Puffer — أسود',category:'clothing',price:699,badge:'وصل جديد',image:'./assets/products/black-puffer.jpg',colors:['#17191b','#777a7c'] },
-  { id:'q-106',name:'جاكيت Sport — رمادي غامق',category:'clothing',price:589,badge:'مريح وخفيف',image:'./assets/products/navy-jacket.jpg',colors:['#363a40','#c9c9c6'] },
-  { id:'q-107',name:'Running Pro — أبيض',category:'shoes',price:499,badge:'خفيف ومريح',image:'./assets/products/running-white.jpg',colors:['#f4f4f1','#a5b4c0'] },
-  { id:'q-108',name:'Running Pro — رمادي',category:'shoes',price:499,badge:'وصل جديد',image:'./assets/products/running-gray.jpg',colors:['#bfc1c2','#30343a'] },
-  { id:'q-109',name:'Running Pro — كحل',category:'shoes',price:499,badge:'ستايل يومي',image:'./assets/products/running-black.jpg',colors:['#17191b','#777a7c'] },
-  { id:'q-110',name:'Tracksuit jacket — أسود',category:'clothing',price:799,badge:'دفء وراحة',image:'./assets/products/tracksuit-jacket.jpg',colors:['#17191b','#d8d9d7'] },
-  { id:'q-111',name:'Tracksuit set — أسود',category:'clothing',price:899,badge:'طقم كامل',image:'./assets/products/tracksuit-set.jpg',colors:['#17191b','#d8d9d7'] },
-  { id:'q-201',name:'كلوغ — أخضر زيتي',category:'shoes',price:null,badge:'الثمن عبر واتساب',image:'./assets/products/qods-olive-clogs.jpg',colors:['#858760','#b4ad82'],description:'كلوغ بلون أخضر زيتي كما يظهر في الصورة.'},
-  { id:'q-202',name:'كلوغ — رمادي مع لمسة لايم',category:'shoes',price:null,badge:'الثمن عبر واتساب',image:'./assets/products/qods-dark-clogs-lime.jpg',colors:['#443d3b','#b6ff00'],description:'كلوغ داكن مع تفاصيل لايم كما يظهر في الصورة.'},
-  { id:'q-203',name:'شبشب — أزرق',category:'shoes',price:null,badge:'الثمن عبر واتساب',image:'./assets/products/qods-blue-slides.jpg',colors:['#2584eb','#121212'],description:'شبشب أزرق كما يظهر في الصورة.'},
-  { id:'q-204',name:'بدلة رياضية — أزرق',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./assets/products/qods-navy-tracksuit.jpg',colors:['#2859a1','#e5e5e5'],description:'بدلة رياضية زرقاء؛ الصورة تعرضها مع حذاء للتنسيق.'},
-  { id:'q-205',name:'بدلة رياضية — رمادي',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./assets/products/qods-grey-tracksuit.jpg',colors:['#8c9188','#222222'],description:'بدلة رياضية رمادية؛ الصورة تعرضها مع حذاء للتنسيق.'},
-  { id:'q-206',name:'بنطال بخطوط جانبية — بني',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./assets/products/qods-striped-pants.jpg',colors:['#755331','#181818'],description:'بنطال بني بخطوط جانبية كما يظهر في الصورة.'},
-  { id:'q-207',name:'بنطال بطبعة مموهة',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./assets/products/qods-camo-pants.jpg',colors:['#596145','#25291f'],description:'بنطال بطبعة مموهة كما يظهر في الصورة.'},
-  { id:'q-208',name:'بدلة رياضية — رمادي فاتح',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./assets/products/qods-grey-set-model.jpg',colors:['#939590','#2b2b2b'],description:'بدلة رياضية رمادية فاتحة كما تظهر في الصورة.'}
+  { id:'q-101',name:'Air High — أبيض وأسود',category:'shoes',price:549,badge:'الأكثر طلباً',image:'./white-sneakers.jpg',colors:['#f4f4f1','#181a1c','#a8aaab'] },
+  { id:'q-102',name:'Street Runner — رمادي',category:'shoes',price:429,badge:'وصل جديد',image:'./gray-sneakers.jpg',colors:['#d8d9d7','#222426'] },
+  { id:'q-103',name:'Urban Low — كحل',category:'shoes',price:469,badge:'اختيار الموسم',image:'./blue-sneakers.jpg',colors:['#171a20','#777d83'] },
+  { id:'q-104',name:'Tracksuit كامل — كحل',category:'clothing',price:649,badge:'قطعة أساسية',image:'./black-tracksuit.jpg',colors:['#17191b','#d8d9d7'] },
+  { id:'q-105',name:'جاكيت Puffer — أسود',category:'clothing',price:699,badge:'وصل جديد',image:'./black-puffer.jpg',colors:['#17191b','#777a7c'] },
+  { id:'q-106',name:'جاكيت Sport — رمادي غامق',category:'clothing',price:589,badge:'مريح وخفيف',image:'./navy-jacket.jpg',colors:['#363a40','#c9c9c6'] },
+  { id:'q-107',name:'Running Pro — أبيض',category:'shoes',price:499,badge:'خفيف ومريح',image:'./running-white.jpg',colors:['#f4f4f1','#a5b4c0'] },
+  { id:'q-108',name:'Running Pro — رمادي',category:'shoes',price:499,badge:'وصل جديد',image:'./running-gray.jpg',colors:['#bfc1c2','#30343a'] },
+  { id:'q-109',name:'Running Pro — كحل',category:'shoes',price:499,badge:'ستايل يومي',image:'./running-black.jpg',colors:['#17191b','#777a7c'] },
+  { id:'q-110',name:'Tracksuit jacket — أسود',category:'clothing',price:799,badge:'دفء وراحة',image:'./tracksuit-jacket.jpg',colors:['#17191b','#d8d9d7'] },
+  { id:'q-111',name:'Tracksuit set — أسود',category:'clothing',price:899,badge:'طقم كامل',image:'./tracksuit-set.jpg',colors:['#17191b','#d8d9d7'] },
+  { id:'q-201',name:'كلوغ — أخضر زيتي',category:'shoes',price:null,badge:'الثمن عبر واتساب',image:'./qods-olive-clogs.jpg',colors:['#858760','#b4ad82'],description:'كلوغ بلون أخضر زيتي كما يظهر في الصورة.'},
+  { id:'q-202',name:'كلوغ — رمادي مع لمسة لايم',category:'shoes',price:null,badge:'الثمن عبر واتساب',image:'./qods-dark-clogs-lime.jpg',colors:['#443d3b','#b6ff00'],description:'كلوغ داكن مع تفاصيل لايم كما يظهر في الصورة.'},
+  { id:'q-203',name:'شبشب — أزرق',category:'shoes',price:null,badge:'الثمن عبر واتساب',image:'./qods-blue-slides.jpg',colors:['#2584eb','#121212'],description:'شبشب أزرق كما يظهر في الصورة.'},
+  { id:'q-204',name:'بدلة رياضية — أزرق',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./qods-navy-tracksuit.jpg',colors:['#2859a1','#e5e5e5'],description:'بدلة رياضية زرقاء؛ الصورة تعرضها مع حذاء للتنسيق.'},
+  { id:'q-205',name:'بدلة رياضية — رمادي',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./qods-grey-tracksuit.jpg',colors:['#8c9188','#222222'],description:'بدلة رياضية رمادية؛ الصورة تعرضها مع حذاء للتنسيق.'},
+  { id:'q-206',name:'بنطال بخطوط جانبية — بني',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./qods-striped-pants.jpg',colors:['#755331','#181818'],description:'بنطال بني بخطوط جانبية كما يظهر في الصورة.'},
+  { id:'q-207',name:'بنطال بطبعة مموهة',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./qods-camo-pants.jpg',colors:['#596145','#25291f'],description:'بنطال بطبعة مموهة كما يظهر في الصورة.'},
+  { id:'q-208',name:'بدلة رياضية — رمادي فاتح',category:'clothing',price:null,badge:'الثمن عبر واتساب',image:'./qods-grey-set-model.jpg',colors:['#939590','#2b2b2b'],description:'بدلة رياضية رمادية فاتحة كما تظهر في الصورة.'}
 ];
 const safeGet = key => { try { return localStorage.getItem(key); } catch { return null; } };
 const safeSet = (key,value) => { try { localStorage.setItem(key,value); return true; } catch { return false; } };
