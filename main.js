@@ -27,11 +27,11 @@ const safeSet = (key,value) => { try { localStorage.setItem(key,value); return t
 const load = (key, fallback) => { try { const value=safeGet(key); return value?JSON.parse(value):fallback; } catch { return fallback; } };
 let products=load('qods-products',seedProducts), cart=load('qods-cart',[]), activeFilter='all', searchTerm='', sortOrder='default';
 
-if(safeGet('qods-catalog-version')!=='4'){
+if(safeGet('qods-catalog-version')!=='5'){
   const old=Array.isArray(products)?products:[];
   const migrated=seedProducts.map(seed=>{const saved=old.find(p=>p.id===seed.id);return saved?{...seed,name:saved.name||seed.name,price:saved.price||seed.price,badge:saved.badge||seed.badge,image:saved.image?.startsWith('data:')?saved.image:seed.image}:seed;});
   products=[...migrated,...old.filter(p=>!seedProducts.some(seed=>seed.id===p.id))];
-  safeSet('qods-products',JSON.stringify(products));safeSet('qods-catalog-version','4');
+  safeSet('qods-products',JSON.stringify(products));safeSet('qods-catalog-version','5');
 }
 const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>[...root.querySelectorAll(s)];
 let language=['ar','fr','en'].includes(safeGet('qods-language'))?safeGet('qods-language'):'ar';
